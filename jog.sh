@@ -10,7 +10,8 @@ echo "|                          Jog Mode                            |"
 echo "|--------------------------------------------------------------|"
 echo "|  j = Jog Axes  s = Stream File   m = Manual Mode   h = Help  |"
 echo "|--------------------------------------------------------------|"
-echo " "
+echo "|   Warning! Work coordinates will be zeroed after jogging!    |"
+echo "|--------------------------------------------------------------|"
 
 echo "Enter the Desired X Axis Motion in Millimeters: " ;
 read XMOTION ;
@@ -80,6 +81,10 @@ if
 [ "$ZMOTION" == "h" ] ;
 then bash help.sh 
 fi
+
+# The following lines take convert the user's input to a gcode file containing the jog values. The file is then streamed to the device.
+
+# If you would like to disable automatic zeroing after each jog, you must edit jog-setup.ngc and jog-end.ngc and delete the lines that read 'G92 X0 Y0 Z0'
 
 echo G0 X$XMOTION Y$YMOTION Z$ZMOTION > motion.ngc ;
 

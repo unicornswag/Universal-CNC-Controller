@@ -36,7 +36,7 @@ then bash help.sh
 fi
 
 
-cat $FILENAME > gcode.ngc ;
+cat $FILENAME > gcode.ngc ; # Copies the user's file to gcode.ngc to be streamed by stream.py
 
 python stream.py gcode.ngc $DEVICE ;
 
