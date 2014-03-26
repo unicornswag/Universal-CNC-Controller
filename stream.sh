@@ -38,6 +38,6 @@ fi
 
 cat $FILENAME > gcode.ngc ;
 
-python stream.py gcode.ngc /dev/ttyACM0 ;
+python stream.py gcode.ngc $DEVICE ;
 
 bash stream.sh ;
