@@ -37,6 +37,6 @@ fi
 
 echo $COMMAND > gcode.ngc ;
 
-python stream.py gcode.ngc $DEVICE ;
+python stream.py gcode.ngc $(cat device) ;
 
 bash manual.sh ;
