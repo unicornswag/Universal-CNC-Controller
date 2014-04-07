@@ -90,7 +90,7 @@ echo G0 X$XMOTION Y$YMOTION Z$ZMOTION > motion.ngc ;
 
 cat jog-setup.ngc motion.ngc jog-end.ngc > gcode.ngc
 
-python stream.py gcode.ngc $DEVICE ;
+python stream.py gcode.ngc $(cat device) ;
 
 bash jog.sh ;
 
