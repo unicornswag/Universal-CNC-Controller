@@ -38,6 +38,6 @@ fi
 
 cat $FILENAME > gcode.ngc ; # Copies the user's file to gcode.ngc to be streamed by stream.py
 
-python stream.py gcode.ngc $DEVICE ;
+python stream.py gcode.ngc $(cat device) ;
 
 bash stream.sh ;
