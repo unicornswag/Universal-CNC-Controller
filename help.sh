@@ -27,10 +27,10 @@ echo "You can start the program by executing the shell script, 'start.sh'"
 echo "provided in this directory. From there, you can enter the letter"
 echo "command corresponding to the desired function listed at the top"
 echo "of the window. "
-if
 
 read -n 1 EXIT
 
+if
 [ "$EXIT" == "j" ] ;
 then bash jog.sh 
 fi
