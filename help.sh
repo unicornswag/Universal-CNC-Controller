@@ -21,7 +21,7 @@ echo "jog your machine, and enter manual gcode commmands. This program"
 echo "should be compatable with any ATMel AVR CNC firmware, including "
 echo "grbl, Teacup, Repetier, Marlin, etc. By default, you will be "
 echo "connected to the device located at /dev/ttyACM0. However, this can"
-echo "be changed to suit your needs in the "device" file"
+echo "be changed to suit your needs in the 'device' file"
 
 echo "You can start the program by executing the shell script, 'start.sh'"
 echo "provided in this directory. From there, you can enter the letter"
